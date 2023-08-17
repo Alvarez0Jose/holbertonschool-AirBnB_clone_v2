@@ -25,13 +25,13 @@ def c_fun(text):
 @app.route('/python', strict_slashes=False)
 @app.route('python/<text>', strict_slashes=False)
 def pythoniscool(text='is cool'):
-    """display "python ", followed by the value of the text variable"""
+    """display “Python ”, followed by the value of the text variable"""
     return 'Python ' + text.replace('_', ' ')
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def imanumber(n):
-    """displayi "n is a number" only if n is an integer"""
+    """display “n is a number”, only if n is an integer"""
     return "{:d} is a number".format(n)
 
 

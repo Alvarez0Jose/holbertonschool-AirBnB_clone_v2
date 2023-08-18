@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that starts the Flask Web App"""
+""" Script that starts the Flask Web App """
 
 from flask import Flask
 
@@ -9,16 +9,19 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello():
+    """Return Hello hbnb"""
     return ("Hello HBNB!")
 
 
 @app.route("/hbnb", strict_slashes=False)
 def rerout():
+    """Return HBNB"""
     return ("HBNB")
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_fun(text):
+    """Replaces _ with spaces"""
     return ('C {}'.format(text.replace("_", " ")))
 
 

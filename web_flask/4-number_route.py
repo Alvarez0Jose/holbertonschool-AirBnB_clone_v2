@@ -19,7 +19,7 @@ def rerout():
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_fun(text):
-    return ('c {}'.format(text.replace("_", " ")))
+    return ('C {}'.format(text.replace("_", " ")))
 
 
 @app.route('/python', strict_slashes=False)

@@ -10,26 +10,29 @@ app = Flask(__name__)
 @app.route("/", strict_slashes=False)
 def hello():
     """Return Hello hbnb"""
-    return ("Hello HBNB!")
+    return "Hello HBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
-def rerout():
+def hello_hbnb():
     """Return HBNB"""
-    return ("HBNB")
+    return "HBNB"
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def c_fun(text):
+def c_is_fun(text):
     """Replaces _ with spaces"""
-    return ('C {}'.format(text.replace("_", " ")))
+    text = text.replace('_', ' ')
+    return f"C {text}"
 
 
 @app.route('/python', strict_slashes=False)
 @app.route('python/<text>', strict_slashes=False)
 def pythoniscool(text='is cool'):
     """display “Python ”, followed by the value of the text variable"""
-    return 'Python ' + text.replace('_', ' ')
+    if text is not "is cool":
+        text = text.replace('_', ' ')
+    return f"Python {text}"
 
 
 if __name__ == '__main__':

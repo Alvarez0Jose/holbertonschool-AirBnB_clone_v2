@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script that starts the Flask Web App """
+"""Module that starts the Flask Web App """
 
 from flask import Flask
 
